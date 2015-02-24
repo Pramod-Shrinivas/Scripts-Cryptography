@@ -1,0 +1,16 @@
+Encode the given data/string to Morse Code
+
+Input:   A file with data to be encoded.
+Output:  A file called Output.txt is created at the current working directory which contains
+         the Morse Code equivalent of the input file
+
+Usage: 002MorseEncode.py [-h] --f FILEPATH 
+Optional Arguments:
+    -h, --help      Shows the help message and exits
+    --f FILEPATH    Enter the file path
+
+Example:
+1: Have a file named input.txt in the current working directory
+Command Line: 002-MorseEncode.py --f input.txt
+2: Have a file named input.txt in C drive
+Command Line: 002-MorseEncode.py --f C:\input.txt
