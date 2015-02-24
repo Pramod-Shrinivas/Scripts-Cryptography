@@ -1,0 +1,28 @@
+#!/usr/bin/python
+import sys
+import argparse
+MORSE_CODE = {'A': '.-',    'B': '-...', 'C': '-.-.', 'D': '-..',  'E': '.',    'F': '..-.',
+              'G': '--.',   'H': '....', 'I': '..',   'J': '.---', 'K': '-.-',  'L': '.-..',
+              'M': '--',    'N': '-.',   'O': '---',  'P': '.--.', 'Q': '--.-', 'R': '.-.',
+              'S': '...',   'T': '-',    'U': '..-',  'V': '...-', 'W': '.--',  'X': '-..-',
+              'Y': '-.--',  'Z': '--..', ' ': ' ',
+              '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-',
+              '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.'}
+
+def main(argv):
+    desc="""Encode the given data to Morse Code"""
+    epilog="""Credits (C) Pramod.S """
+    parser = argparse.ArgumentParser(description=desc,epilog=epilog)
+    parser.add_argument("--f",help="Enter the file path",dest='filePath',required=True)  
+    temp=parser.parse_args()
+    filePath=temp.filePath
+    inputFile = open(filePath,'r')
+    outputFile = open('output.txt','w')
+    for char in inputFile.read():
+        print(MORSE_CODE[char.upper()],end="")
+        outputFile.write(MORSE_CODE[char.upper()])
+    inputFile.close()
+    outputFile.close()
+                                 
+if __name__ == "__main__":
+    main(sys.argv[1:])
