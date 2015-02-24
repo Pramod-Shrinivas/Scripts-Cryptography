@@ -1,0 +1,20 @@
+Prints all possible Shifts/Rot(Rotate-by) combinations(0-25)
+
+Input:   A file with data to be encoded/decoded for caeser cipher.
+Output:  A file called Output.txt is created at the current working directory which contains
+         all possible Shifts/Rot(Rotate-by) combinations of the input file.
+
+Usage: 001-CaeserCipher.py [-h] --f FILEPATH [--r SHIFT]
+Optional Arguments:
+    -h, --help      Shows the help message and exits
+    --f FILEPATH    Enter the file path
+    --r SHIFT       [Optional] Shift/Rotation by (0-25)
+
+Example:
+1: Have a file named input.txt in the current working directory
+Command Line: 001-CaeserCipher.py --f input.txt
+2: Have a file named input.txt in C drive
+Command Line: 001-CaeserCipher.py --f C:\input.txt
+3: To specify the required shift by value
+Command Line: 001-CaeserCipher.py --f input.txt --r 5
+
