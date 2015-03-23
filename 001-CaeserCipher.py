@@ -31,14 +31,14 @@ def main(argv):
     if(shift is None):
         for i in range(1,26):
             inputFile.seek(0,0)
-            print("ROT {0}: {1}".format(i,caesercipher(inputFile.read(),i)))
+            print("ROT {0}: {1}".format(i,caesercipher(inputFile.read().split('\n'),i)))
             inputFile.seek(0,0)
-            outputFile.write("ROT {0}: {1}\n".format(i,caesercipher(inputFile.read(),i)))
+            outputFile.write("ROT {0}: {1}\n".format(i,caesercipher(inputFile.read().split('\n'),i)))
     else:
         if(shift>0 and shift <26):
-            print("ROT {0}: {1}".format(shift,caesercipher(inputFile.read(),shift)))
+            print("ROT {0}: {1}".format(shift,caesercipher(inputFile.read().split('\n'),shift)))
             inputFile.seek(0,0)
-            outputFile.write("ROT {0}: {1}\n".format(shift,caesercipher(inputFile.read(),shift)))
+            outputFile.write("ROT {0}: {1}\n".format(shift,caesercipher(inputFile.read().split('\n'),shift)))
     inputFile.close()
     outputFile.close()
                                  
